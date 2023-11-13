@@ -1,8 +1,11 @@
+import Hero from "../module/Hero"
 
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div>
+      <Hero/>
+    </div>
   )
 }
 

@@ -10,4 +10,11 @@ interface DATA{
     count:number
 }
 
-export {DATA};
+
+interface MENU{
+    id:number,
+    name:string,
+    url:string
+}
+
+export {DATA,MENU};
