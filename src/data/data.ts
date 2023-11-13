@@ -11,9 +11,9 @@ import image10 from "./assets/10.jpg"
 import image11 from "./assets/11.jpg"
 import image12 from "./assets/12.jpg"
 import image13 from "./assets/13.jpg"
-import image15 from "./assets/15.jpg"
-import image16 from "./assets/16.jpg"
-import image17 from "./assets/17.jpg"
+import image15 from "./assets/14.jpg"
+import image16 from "./assets/15.jpg"
+import image17 from "./assets/16.jpg"
 
 //inteface//type script
 import { DATA } from "../types/interface/interface"
@@ -23,13 +23,13 @@ import { DATA } from "../types/interface/interface"
 import { DATAS } from "../types/enums/enum"
 
 import kodak from "../components/images/kodak.png"
-import tarikh from "./images/tarikh.png"
-import falsafeh from "./images/falsafeh.png"
-import woman from "./images/woman.png"
-import angizeshi from "./images/angizeshi.png"
-import roman from "./images/roman.png"
-import romannojavan from "./images/romannojavan.png"
-import bartarin from "./images/bartarin.png"
+import tarikh from "../components/images/tarikh.png"
+import falsafeh from "../components/images/falsafeh.png"
+import woman from "../components/images/woman.png"
+import angizeshi from "../components/images/angizeshi.png"
+import roman from "../components/images/roman.png"
+import romannojavan from "../components/images/romannojavan.png"
+import bartarin from "../components/images/bartarin.png"
 
 const books:DATA =[
     {id:1,name:"جادو",auther:"راندان برن",motarjem:"سارا عزیزی",image:image1,price:73500,rate:3.9,count:120,category:DATAS.CATEGORY_BIG},
