@@ -31,7 +31,7 @@ function Header() {
   return (
     <div className='flex justify-between max-w-[1500px] mx-auto mt-3'>
       {/*right meu */}
-      <div>
+      <div className='flex justify-center w-full lg:w-fit'>
         <Seacrh/>
       </div>
       {/*right meu */}
@@ -53,7 +53,7 @@ function Header() {
       {/* left menu */}
 
       {/* icons hamburger menu */}
-        <div className='cursor-pointer relative z-10 md:hidden'>
+        <div className='cursor-pointer relative z-40 md:hidden'>
           {
             open ? (
               <AiOutlineMenu size={30} color="black" onClick={()=>setOpen(!open)}/>
@@ -63,7 +63,7 @@ function Header() {
           }
         </div>
 
-          <div className={!open? 'absolute top-0 bg-blue-500 w-full h-full flex flex-col items-center justify-center gap-5 duration-300' : 'absolute duration-300 top-[-100%] bg-blue-500 w-full h-full flex flex-col items-center justify-center gap-5'}>
+          <div className={!open? 'absolute top-0 bg-blue-500 w-full h-full flex flex-col items-center justify-center gap-5 duration-300 z-30' : 'absolute z-30 duration-300 top-[-100%] bg-blue-500 w-full h-full flex flex-col items-center justify-center gap-5'}>
         {menuList.map((item:MENU)=>(
           <div>
             <p className='hover:bg-black p-2 hover:rounded-lg hover:text-white duration-300 cursor-pointer hover:p-3 '>{item.name}</p>
