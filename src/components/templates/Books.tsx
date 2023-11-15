@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState,useContext} from "react"
 
 import { books } from "../../data/data"
 
@@ -6,11 +6,19 @@ import { books } from "../../data/data"
 import { DATA } from "../../types/interface/interface"
 import CardBooks from "../module/CardBooks"
 
+// data
+import { products } from "../context/ContextProvider"
+
 //icon
 import { AiOutlineMeh } from "react-icons/ai";
 
 function Books() {
   const [liked,setLikde]=useState<[]>([])
+  
+
+  //context
+  const {product,setProduct}=useContext(products)
+
 
   const handeleLike=(data,status)=>{
     if(status){
@@ -25,7 +33,7 @@ function Books() {
   return (
     <>
     <div className='max-w-[1500px] mx-auto lg:flex grid grid-cols-2 gap-3 flex-wrap'>
-    {books.map((item:DATA)=>(
+    {product.map((item:DATA)=>(
         <CardBooks key={item.id} data={item} handeleLike={handeleLike}/>
     ))}
     </div>
