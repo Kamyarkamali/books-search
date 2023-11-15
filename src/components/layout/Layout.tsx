@@ -1,5 +1,3 @@
-import React from 'react'
-
 //Coponents/layot
 import Header from "./Header";
 import Footer from './Footer';
@@ -10,7 +8,7 @@ function Layout({children}:any) {
     <div>
         <Header/>
 
-        <div className='min-h-[1000px]'>
+        <div className='h-fit'>
             {children}
         </div>
 

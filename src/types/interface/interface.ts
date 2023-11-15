@@ -17,4 +17,10 @@ interface MENU{
     url:string
 }
 
-export {DATA,MENU};
+interface Teaser{
+    id:number,
+    image:any,
+    title:string
+}
+
+export {DATA,MENU,Teaser};

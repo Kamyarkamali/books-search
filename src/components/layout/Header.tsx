@@ -21,12 +21,6 @@ function Header() {
     {id:3,name:"تماس با ما",url:""},
   ]
 
-  const addressMedi:[] =[
-    {id:1,linkdin:"https://www.linkedin.com/in/kamyar-kamali-671a5822b/"},
-    {id:2,gitHub:"https://github.com/Kamyarkamali"},
-  ]
-
-  const {linkdin,gitHub}=addressMedi
 
   return (
     <div className='flex justify-between max-w-[1500px] mx-auto mt-3'>
@@ -40,7 +34,7 @@ function Header() {
       <div className='hidden md:block'>
         <ul className='flex items-center gap-7'>
           {menuList.map((item:MENU)=>(
-            <li className='text-blue-500 text-[17px] hover:bg-orange-400 hover:p-2 hover:rounded-md hover:text-white duration-300 cursor-pointer'>{item.name}</li>
+            <li key={item.id} className='text-blue-500 text-[17px] hover:bg-orange-400 hover:p-2 hover:rounded-md hover:text-white duration-300 cursor-pointer'>{item.name}</li>
           ))}
         </ul>
       </div>
@@ -65,8 +59,8 @@ function Header() {
 
           <div className={!open? 'absolute top-0 bg-blue-500 w-full h-full flex flex-col items-center justify-center gap-5 duration-300 z-30' : 'absolute z-30 duration-300 top-[-100%] bg-blue-500 w-full h-full flex flex-col items-center justify-center gap-5'}>
         {menuList.map((item:MENU)=>(
-          <div>
-            <p className='hover:bg-black p-2 hover:rounded-lg hover:text-white duration-300 cursor-pointer hover:p-3 '>{item.name}</p>
+          <div key={item.id}>
+            <p key={item.id} className='hover:bg-black p-2 hover:rounded-lg hover:text-white duration-300 cursor-pointer hover:p-3 '>{item.name}</p>
           </div>
         ))}
         {/* icons sochial media */}
