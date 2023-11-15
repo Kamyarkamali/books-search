@@ -4,6 +4,10 @@ import image3 from "../teaster/3.jpg";
 
 ///interface
 import { Teaser } from "../../types/interface/interface";
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function teaser() {
 
@@ -13,10 +17,14 @@ function teaser() {
         {id:3,image:image3,title:"کتاب های رمان"},
     ]
 
+    useEffect(()=>{
+        AOS.init()
+      },[])
+
   return (
     <>
         <h1 className="mr-4 text-xl text-gray-600">بهترین موضوعات</h1>
-    <div className="max-w-[1300px] mx-auto lg:flex gap-7 justify-center md:grid">
+    <div data-aos="fade-up" className="max-w-[1300px] mx-auto lg:flex gap-7 justify-center md:grid">
         {
             teaser.map((item:Teaser)=>(
                 <div key={item.id} className="border-[2px] p-2 mt-4 border-blue-500 rounded-lg hover:scale-105 duration-300">

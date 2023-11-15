@@ -43,7 +43,7 @@ function Books() {
 
       {
         liked.map((item:DATA)=>(
-          <div className="border-[2px] rounded-md p-2 flex flex-col items-center">
+          <div key={item.id} className="border-[2px] rounded-md p-2 flex flex-col items-center">
             <img src={item.image} alt={item.name} className="w-[100px] rounded-md border-blue-400"/>
             <p>{item.name}</p>
           </div>

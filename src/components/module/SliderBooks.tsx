@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -6,11 +6,19 @@ import "react-multi-carousel/lib/styles.css";
 import { books } from "../../data/data";
 import { DATA } from "../../types/interface/interface";
 
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 //icons
 import { AiFillStar } from "react-icons/ai";
 
 function SliderBooks() {
+
+  useEffect(()=>{
+    AOS.init()
+  },[])
 
 
     const responsive = {
@@ -37,7 +45,7 @@ function SliderBooks() {
         
 <Carousel responsive={responsive}>
         {books.map((item:DATA)=>(
-          <div key={item.id} className="flex relative flex-col text-center items-center justify-center border-[1px] h-[400px] p-1 m-2 border-blue-400 rounded-lg hover:scale-105 duration-300 mt-7">
+          <div data-aos="fade-up" key={item.id} className="flex relative flex-col text-center items-center justify-center border-[1px] h-[400px] p-1 m-2 border-blue-400 rounded-lg hover:scale-105 duration-300 mt-7">
             <img src={item.image} alt={item.name} className="w-[240px]" />
             <p className="text-gray-500 text-xl">{item.name}</p>
             <div className="flex flex-col items-center leading-10 lg:flex-row justify-evenly gap-4 w-full text-red-600">

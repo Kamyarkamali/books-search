@@ -1,4 +1,6 @@
 import './App.css'
+import BooksId from './components/module/BooksId';
+import Books from './components/templates/Books';
 //copoment
 import HomePage from './components/templates/HomePage';
 
@@ -10,6 +12,8 @@ function App() {
     <>
     <Routes>
       <Route path='/' element={<HomePage/>}/>
+      <Route path='/books' element={<Books/>}/>
+      <Route path='/booksId/:id' element={<BooksId/>}/>
     </Routes>
     </>
   )

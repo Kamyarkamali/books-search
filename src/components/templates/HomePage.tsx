@@ -5,9 +5,13 @@ import SliderBooks from "../module/SliderBooks";
 import Books from "./Books";
 
 
+
 function HomePage() {
+
+
+
   return (
-    <div>
+    <div data-aos="fade-up-right">
       <Hero/>
       <Teaster/>
       <SliderBooks/>
