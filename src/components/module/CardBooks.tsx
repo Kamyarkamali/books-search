@@ -29,9 +29,7 @@ function CardBooks({data,handeleLike}:DATA) {
 
   return (
     <div data-aos="fade-up" className='max-w-[1400px] relative mx-auto border-[2px] border-blue-400 rounded-lg m-6 p-3 flex flex-col items-center justify-center'>
-      <Link to={`/booksId/${id}`}>
       <img src={image} alt={name} className='w-[160px] h-[200px] mt-3 rounded-lg hover:scale-105 duration-300'/>
-      </Link>
       <p className='text-blue-600'>{name}</p>
       <p className='flex items-center absolute top-0 left-0 text-gray-400 font-bold'>{data.rate} <AiFillStar size={20} color="yellow"/></p>
       <button className='absolute top-0 right-1' onClick={handelLike}>

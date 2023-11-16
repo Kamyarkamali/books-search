@@ -10,13 +10,15 @@ import {AiOutlineMenu} from "react-icons/ai";
 import {AiFillCloseCircle} from "react-icons/ai";
 import {AiFillGithub} from "react-icons/ai";
 import {AiFillLinkedin} from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 function Header() {
 
   const [open,setOpen]=useState<boolean>(true);
 
   const menuList:MENU=[
-    {id:1,name:"کتاب ها",url:""},
+    {id:1,name:"صفحه اصلی",url:"/"},
+    {id:1,name:"کتاب ها",url:"/books"},
     {id:2,name:"درباره فروشگاه",url:""},
     {id:3,name:"تماس با ما",url:""},
   ]
@@ -34,7 +36,9 @@ function Header() {
       <div className='hidden md:block'>
         <ul className='flex items-center gap-7'>
           {menuList.map((item:MENU)=>(
+            <Link key={item.id} to={item.url}>
             <li key={item.id} className='text-blue-500 text-[17px] hover:bg-orange-400 hover:p-2 hover:rounded-md hover:text-white duration-300 cursor-pointer'>{item.name}</li>
+            </Link>
           ))}
         </ul>
       </div>
